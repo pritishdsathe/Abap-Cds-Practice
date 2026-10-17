@@ -30,6 +30,7 @@ A learning project built on an SAP S/4HANA trial system using **ABAP Cloud** (cl
 |---|---|
 | `cds/` | CDS view entities (`ZI_`, `ZC_`) |
 | `service/` | Service definition |
+| `metadata/` | Metadata Extension |
 | `screenshots/` | Fiori Elements preview |
 
 ## Key design decisions
@@ -50,7 +51,7 @@ A learning project built on an SAP S/4HANA trial system using **ABAP Cloud** (cl
 
 ## Roadmap
 
-- [ ] Metadata Extension (move UI annotations out of the CDS view)
+- [ X ] Metadata Extension (move UI annotations out of the CDS view)
 - [ ] Object Page (`@UI.facet`, field groups)
 - [ ] Text associations with `@ObjectModel.text`
 - [ ] Access control (DCL)
