@@ -10,6 +10,8 @@ define view entity ZC_SALESORDERITEM_OV as select from ZI_SALESORDERITEM_OV
     SoldToParty,
     CustomerName,
     Material,
+    MaterialName,
+    Product,
     @Semantics.quantity.unitOfMeasure: 'OrderQuantityUnit'
     OrderQuantity,
     OrderQuantityUnit,
@@ -22,6 +24,7 @@ define view entity ZC_SALESORDERITEM_OV as select from ZI_SALESORDERITEM_OV
     UnitPrice,
     /* Associations */
     _Customer,
+    _ProductText,
     @EndUserText.label: 'City'
     _Customer.CityName as City,
     @EndUserText.label: 'Country'
