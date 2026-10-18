@@ -15,8 +15,10 @@ define view entity ZC_SALESORDERITEM_OV as select from ZI_SALESORDERITEM_OV
     OrderQuantityUnit,
     @Semantics.amount.currencyCode: 'TransactionCurrency'
     NetAmount,
+    @EndUserText.label: 'Currency'
     TransactionCurrency,
     @Semantics.amount.currencyCode: 'TransactionCurrency'
+    @EndUserText.label: 'Unit Price'
     UnitPrice,
     /* Associations */
     _Customer,
