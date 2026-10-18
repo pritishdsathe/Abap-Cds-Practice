@@ -2,7 +2,7 @@
 @UI:{ headerInfo:{ typeName: 'Sales Order Item',
                    typeNamePlural: 'Sales Order Items',
                    title: { value: 'SalesDocument' } ,
-                   description: { value: 'Material' } } }
+                   description: { value: 'MaterialName' } } }
 annotate entity ZC_SALESORDERITEM_OV
     with 
 {
@@ -43,24 +43,28 @@ annotate entity ZC_SALESORDERITEM_OV
     @Search.defaultSearchElement: true
     Material;
     
-    @UI.fieldGroup: [{ qualifier: 'Price', position: 10 }]
+    @UI.fieldGroup: [{ qualifier: 'General', position: 40 }]
     @UI.lineItem: [{ position: 60 }]
+    MaterialName;
+    
+    @UI.fieldGroup: [{ qualifier: 'Price', position: 10 }]
+    @UI.lineItem: [{ position: 70 }]
     OrderQuantity;
     
     @UI.fieldGroup: [{ qualifier: 'Price', position: 20 }]
-    @UI.lineItem: [{ position: 70 }]
+    @UI.lineItem: [{ position: 80 }]
     NetAmount;
     
     @UI.fieldGroup: [{ qualifier: 'Price', position: 30 }]
-    @UI.lineItem: [{ position: 80 }]
+    @UI.lineItem: [{ position: 90 }]
     UnitPrice;
     
     @UI.fieldGroup: [{ qualifier: 'Customer', position: 30 }]
-    @UI.lineItem: [{ position: 90 }]
+    @UI.lineItem: [{ position: 100 }]
     City;
     
     @UI.fieldGroup: [{ qualifier: 'Customer', position: 40 }]
-    @UI.lineItem: [{ position: 100 }]
+    @UI.lineItem: [{ position: 110 }]
     Country;
 
 }
