@@ -8,11 +8,14 @@ association [0..1] to I_Customer as _Customer
 on $projection.SoldToParty = _Customer.Customer
 {
     _Customer,
+    _ProductText,
     key SalesDocument,
     key SalesDocumentItem,
     SoldToParty,
     _Customer.CustomerName as CustomerName,
+    Product,
     Material,
+    _ProductText[1: Language = $session.system_language ].ProductName as MaterialName,
     @Semantics.quantity.unitOfMeasure: 'OrderQuantityUnit'
     OrderQuantity,
     OrderQuantityUnit,
@@ -26,5 +29,5 @@ on $projection.SoldToParty = _Customer.Customer
     cast(0 as abap.dec( 15, 2))
     else
     cast(NetAmount as abap.dec( 15, 2 )) / cast(OrderQuantity as abap.dec( 13, 3 ))
-    end as abap.dec( 15, 2 )) as UnitPrice
+    end as abap.curr( 15, 2 )) as UnitPrice
 };
