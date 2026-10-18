@@ -1,38 +1,65 @@
 @Metadata.layer: #CORE
+@UI:{ headerInfo:{ typeName: 'Sales Order Item',
+                   typeNamePlural: 'Sales Order Items',
+                   title: { value: 'SalesDocument' } ,
+                   description: { value: 'Material' } } }
 annotate entity ZC_SALESORDERITEM_OV
     with 
 {
+    @UI.facet: [{ id: 'GeneralInformation', type:#FIELDGROUP_REFERENCE , 
+                  label: 'General', targetQualifier: 'General', 
+                  position: 10 },
+                
+                { id: 'CustomerInformation', type:#FIELDGROUP_REFERENCE , 
+                  label: 'Customer', targetQualifier: 'Customer', 
+                  position: 20 },
+                
+                { id: 'Pricing', type: #FIELDGROUP_REFERENCE,
+                  label: 'Price', targetQualifier: 'Price',
+                  position: 30 } 
+                    
+                  ]
+    @UI.fieldGroup: [{ qualifier: 'General', position: 10 }]
     @UI.lineItem: [{ position: 10 }]
     @UI.selectionField: [{ position: 10 }]
     @Search.defaultSearchElement: true
     SalesDocument;
     
+    @UI.fieldGroup: [{ qualifier: 'General', position: 20 }]
     @UI.lineItem: [{ position: 20 }]
     SalesDocumentItem;
     
+    @UI.fieldGroup: [{ qualifier: 'Customer', position: 10 }]
     @UI.lineItem: [{ position: 30 }]
     @UI.selectionField: [{ position:20 }]
     SoldToParty;
     
+    @UI.fieldGroup: [{ qualifier: 'Customer', position: 20 }]
     @UI.lineItem: [{ position: 40 }]
     CustomerName;
     
+    @UI.fieldGroup: [{ qualifier: 'General', position: 30 }]
     @UI.lineItem: [{ position: 50 }]
     @Search.defaultSearchElement: true
     Material;
     
+    @UI.fieldGroup: [{ qualifier: 'Price', position: 10 }]
     @UI.lineItem: [{ position: 60 }]
     OrderQuantity;
     
+    @UI.fieldGroup: [{ qualifier: 'Price', position: 20 }]
     @UI.lineItem: [{ position: 70 }]
     NetAmount;
     
+    @UI.fieldGroup: [{ qualifier: 'Price', position: 30 }]
     @UI.lineItem: [{ position: 80 }]
     UnitPrice;
     
+    @UI.fieldGroup: [{ qualifier: 'Customer', position: 30 }]
     @UI.lineItem: [{ position: 90 }]
     City;
     
+    @UI.fieldGroup: [{ qualifier: 'Customer', position: 40 }]
     @UI.lineItem: [{ position: 100 }]
     Country;
 
