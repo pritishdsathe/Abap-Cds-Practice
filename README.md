@@ -52,7 +52,7 @@ A learning project built on an SAP S/4HANA trial system using **ABAP Cloud** (cl
 ## Roadmap
 
 - [ X ] Metadata Extension (move UI annotations out of the CDS view)
-- [ ] Object Page (`@UI.facet`, field groups)
+- [ X ] Object Page (`@UI.facet`, field groups)
 - [ ] Text associations with `@ObjectModel.text`
 - [ ] Access control (DCL)
 - [ ] RAP managed scenario with custom table (create, update, delete, validations)
